@@ -6,13 +6,13 @@
 
 ![methodology](assets/methodology.png)
 
-_Fig: Overview of the proposed R4 agentic framework. The chest X-ray and its accompanying text is used as input. Patient medical history and metadata are then passed to the Router Agent (1), which selects a task configuration and specialized LLM to handle the case. The Retriever Agent (2) queries the LLM knowledge base with k retrieved exemplars to generate an initial report I together with an initial bounding box B in normalized coordinates (x1, x2, y1, y2). The Reflect Agent (3) critiques I and B under targeted clinical and safety constraints, producing an issue set I. The Repair Agent (4) updates the draft report and bounding box using these constraints, consults the cache memory for similar exemplars, and outputs a final report and refined bounding box that are fed back into the cache for future retrieval._
+_**Fig:** Overview of the proposed R4 agentic framework. The chest X-ray and its accompanying text is used as input. Patient medical history and metadata are then passed to the Router Agent (1), which selects a task configuration and specialized LLM to handle the case. The Retriever Agent (2) queries the LLM knowledge base with k retrieved exemplars to generate an initial report I together with an initial bounding box B in normalized coordinates (x1, x2, y1, y2). The Reflect Agent (3) critiques I and B under targeted clinical and safety constraints, producing an issue set I. The Repair Agent (4) updates the draft report and bounding box using these constraints, consults the cache memory for similar exemplars, and outputs a final report and refined bounding box that are fed back into the cache for future retrieval._
 
 ## Examples
 
 ![examples](assets/example.png)
 
-_Fig: Pass@k qualitative example (backbone: Gemini-2.5-Flash). Report text and bounding-box localization improve from Pass@1 to Pass@3._
+_**Fig:** Pass@k qualitative example (backbone: Gemini-2.5-Flash). Report text and bounding-box localization improve from Pass@1 to Pass@3._
 
 ## Results
 
